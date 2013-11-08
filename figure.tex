@@ -1,0 +1,17 @@
+
+\documentclass{jarticle}
+\usepackage{ascmac,ecltree,epic,eepic}
+
+\begin{document}
+
+	\begin{table}[htbp]
+		\begin{tabular}{|c|c||c|c|c|} \hline
+		P & Q & \(P \to Q\) & \(P \land (P \to Q)\) & \((P \land (P \to Q)) \to Q\) \\ \hline
+		0 & 0 &           1 &                      0 &                              1 \\ \hline
+		0 & 1 &           1 &                      0 &                              1 \\ \hline \hline
+		1 & 0 &           0 &                      0 &                              1 \\ \hline \hline
+		1 & 1 & 	  1 &                      1 &                              1 \\ \hline
+		\end{tabular}
+	\end{table}
+
+\end{document}

@@ -1,0 +1,29 @@
+\documentclass[b5paper]{jarticle}
+\usepackage{ascmac}
+\usepackage{graphicx}
+
+\makeatletter
+\newcommand{\figcaption}[1]{\def\@captype{figure}\caption{#1}}
+\newcommand{\tblcaption}[1]{\def\@captype{table}\caption{#1}}
+\makeatother
+
+
+\begin{document}
+	\section{A}
+	\begin{center}
+		%\begin{minipage}{.7\textwidth}
+			\begin{itembox}[l]{hyou}
+				\begin{center}
+		\begin{tabular}{|c|c||c|c|c|} \hline
+		P & Q & \(P \to Q\) & \(P \land (P \to Q)\) & \((P \land (P \to Q)) \to Q\) \\ \hline
+		0 & 0 &           1 &                      0 &                              1 \\ \hline
+		0 & 1 &           1 &                      0 &                              1 \\ \hline \hline
+		1 & 0 &           0 &                      0 &                              1 \\ \hline \hline
+		1 & 1 & 	  1 &                      1 &                              1 \\ \hline
+		\end{tabular}
+
+				\end{center}	
+			\end{itembox}
+		%\end{minipage}
+	\end{center}
+\end{document}

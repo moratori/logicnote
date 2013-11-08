@@ -1,0 +1,185 @@
+\documentclass[10pt]{jarticle}
+\usepackage{ascmac,ecltree,epic,eepic}
+
+\begin{document}
+	
+	
+	\title{論理学まとめのノート}
+	\author{moratori}
+	\date{\today}
+	\maketitle
+
+
+	
+	\begin{abstract}
+		論理学の初歩的な部分についてまとめたノートです. 
+		論理学の初学者である私が知識を体系的に纏めるために書きました.
+	\end{abstract}
+
+	%\tableofcontents
+
+
+
+
+	\section{命題論理}
+	
+	
+	
+	\subsection{論理式の定義}
+	「2は素数である」や「1は10より大きい」などの真偽の問える
+	言明を命題という. 論理式とはこれら命題を記号で
+	形式化して表したものである. 論理式は基本命題と複合命題を表すものに分かれ
+	複合命題は基本命題と論理結合子により複合的に作られるものである. \\
+	ここでその論理式の定義を述べる
+	\begin{itembox}[l]{定義1-1}
+
+		原子論理式は論理式である 
+
+		\(\psi , \phi \)が適当な論理式であるとき、以下の式は論理式である. 
+
+		\((\lnot \psi) \) , \((\psi \land \phi)\) , \((\psi \lor \phi)\) , \((\psi \to \phi)\) , \((\psi \Leftrightarrow \phi)\)
+	\end{itembox}
+	原子論理式(素式、命題変数、原子式)とはひとつの命題(基本命題)を表す. \\
+	またここでの論理結合子とは、\(\lnot\) , \(\land\) , \(\lor\) , \(\to\) , \(\Leftrightarrow\)のことである.
+	\footnote{\(\lnot\) と \(\land\)(若しくは十全な結合子の組)からなる論理式を定義し他の結合子はこれの省略であるとする場合もある }
+	\begin{itembox}[l]{例}
+		定義1-1により作られる以下の式は論理式である. 
+
+		\(((P \land (P \to Q)) \to Q) \) \\
+		今P,Qを原子論理式とすると、定義より\((P \to Q)\)は論理式となり 
+		これと Pは(原子)論理式であるから \((P \land (P \to Q))\)も論理式となり 
+		さらに \(((P \land (P \to Q)) \to Q)\) も論理式となる.この論理式の形成に於いて、最後に導入される論理結合子(ここでは二回目の\(\to\))
+		を主結合子といい、途中で形成される論理式を部分論理式という
+	\end{itembox}
+
+
+
+
+
+
+	\subsection{論理式の意味}
+	命題とは真か偽の何れかに値の決まるものであるから
+	真であることを1,偽であることを0で表し論理式への 
+	真偽値割り当てをする付置関数を定義する
+	\begin{itembox}[l]{定義1-2}
+		原子論理式の集合\(F\)から\{0,1\}への写像 \\
+		\(\sigma : F \rightarrow \{0,1\}\) 　を解釈という
+	\end{itembox}
+	次に定義1-1に従い原子論理式から帰納的に構成される論理式について、\\
+	真偽値の割り当てを行うため\(\sigma\)を拡張する. 
+	\begin{itembox}[l]{定義1-3}
+		任意の論理式の集合\(\overline{F}\)から\{0,1\}への写像 \\
+		\(\overline{\sigma} : \overline{F} \rightarrow \{0,1\}\)　について
+		\begin{enumerate}
+			\item 論理式\(\psi\)が\(\psi \in F\)の場合
+
+			\(F \subset \overline{F}\)であるので\(\overline{\sigma}\)は原子論理式にも真偽値を割り当てるが \\ 
+			この場合\(\overline{\sigma}(\psi) = \sigma(\psi)\)とする.つまり定義1-2の写像に同じ
+
+			\item \(\lnot\psi\)の場合　　\(\overline{\sigma}(\lnot\psi) = 1 - \overline{\sigma}(\psi)\)
+
+			つまり\(\overline{\sigma}(\psi) = 0\)のとき\(\overline{\sigma}(\lnot\psi) = 1\)
+			
+			それ以外のとき\(\overline{\sigma}(\lnot\psi) = 0\)
+
+
+			\item \(\psi \land \phi \)の場合　\(\overline{\sigma}(\psi \land \phi) = \min\{\overline{\sigma}(\psi), \overline{\sigma}(\phi)\} \)
+			
+			つまり\(\overline{\sigma}(\psi) = \overline{\sigma}(\phi) = 1\)のとき\(\overline{\sigma}(\psi \land \phi) = 1\)
+			
+			それ以外のとき\(\overline{\sigma}(\psi \land \phi) = 0\)
+			
+			\item \(\psi \lor \phi\)の場合　\(\overline{\sigma}(\psi \lor \phi) = \max\{\overline{\sigma}(\psi), \overline{\sigma}(\phi)\} \)
+			
+			つまり\(\overline{\sigma}(\psi) = \overline{\sigma}(\phi) = 0\)のとき\(\overline{\sigma}(\psi \lor \phi) = 0\)
+			
+			それ以外のとき\(\overline{\sigma}(\psi \lor \phi) = 1\)
+			
+			\item \(\psi \to \phi\)の場合　\(\overline{\sigma}(\psi \to \phi) = \max\{1 - \overline{\sigma}(\psi), \overline{\sigma}(\phi)\} \)
+			
+			つまり\(\overline{\sigma}(\psi) = 1 , \overline{\sigma}(\phi) = 0\)のとき\(\overline{\sigma}(\psi \to \phi) = 0\)
+			
+			それ以外のとき\(\overline{\sigma}(\psi \to \phi) = 1\)
+
+			\item \(\psi \Leftrightarrow \phi \)の場合　
+			
+			\(\overline{\sigma}(\psi\Leftrightarrow\phi) = \min\{\max\{1-\overline{\sigma}(\psi),\overline{\sigma}(\phi)\},\max\{1-\overline{\sigma}(\phi) , \overline{\sigma}(\psi)\}\} \)
+
+			つまり\(\overline{\sigma}(\psi) = \overline{\sigma}(\phi)\)のとき\(\overline{\sigma}(\psi \Leftrightarrow \phi)=1\)
+
+			それ以外のとき\(\overline{\sigma}(\psi \Leftrightarrow \phi)=0\)
+		\end{enumerate}
+
+	\end{itembox}
+
+
+	定義1-2は、ある論理式\(\psi\)を真偽値分析する場合に真偽表の左の列に
+	\(\psi\)を構成する原子論理式へ真偽値割り当てを行うことに相当する. \\
+	解釈\(\sigma\)は\(\psi\)を構成する原子論理式の数がnの場合\(2^n\)存在する.
+	つまり真偽表の行数分解釈があるという事である.\\
+	定義1-3はある解釈\(\sigma\)をもとにそのときの一般の論理式への真偽値割り当ての方法を帰納的に定めている.
+	
+
+
+
+
+
+	
+
+
+	\begin{itembox}[l]{例}
+	原子論理式でない帰納的に成る論理式に対する意味付けを示す \\
+	解釈\(\sigma\)を\(\sigma(P) = 1 , \sigma(Q) = 0\)とするとき
+	\(\overline{\sigma}(((P \land (P \to Q)) \to Q))\)を考えると、定義1-3より以下のようになる 
+	
+	\begin{center}
+	\GapWidth=5pt
+	\begin{bundle}{\( \overline{\sigma}((P \land (P \to Q)) \to Q ) = 1\)}
+		\chunk{
+			\begin{bundle}{\( \overline{\sigma}(P \land (P \to Q)) = 0\)}
+				\chunk{\( \overline{\sigma}(P) = 1 \)}
+				\chunk{
+					\begin{bundle}{\( \overline{\sigma}(P \to Q) = 0 \)}
+						\chunk{\( \overline{\sigma}(P) = 1 \)}
+						\chunk{\( \overline{\sigma}(Q) = 0 \)}
+					\end{bundle}				
+				}
+			\end{bundle}		
+		}
+		\chunk{\( \overline{\sigma}(Q) = 0 \)}
+	\end{bundle}
+
+	\end{center}
+	
+	これは以下の真偽値表の三行目に対応している 
+	
+	\begin{center}
+		\begin{tabular}{|c|c||c|c|c|} \hline
+		P & Q & \(P \to Q\) & \(P \land (P \to Q)\) & \((P \land (P \to Q)) \to Q\) \\ \hline
+		0 & 0 &           1 &                      0 &                              1 \\ \hline
+		0 & 1 &           1 &                      0 &                              1 \\ \hline \hline
+		1 & 0 &           0 &                      0 &                              1 \\ \hline \hline
+		1 & 1 & 	  1 &                      1 &                              1 \\ \hline
+		\end{tabular}
+	\end{center}
+
+	\end{itembox}
+
+	
+	以上の例に於いて、 \((P \land (P \to Q)) \to Q\) の式は如何なる付置についても、\\
+	言い換えれば、真偽値表の全ての行で真となることがわかる. \\
+	これを恒真であるとかトートロジーといい、一般に恒真な式を\(\psi\)とするとき\(\models \psi\)と表す. 
+	逆に\(P \land \lnot P\)のような如何なる付置を与えても偽となるような式を矛盾や恒偽という. 
+	また恒偽でない式、つまりある付置により式が真になるものを充足可能という. 恒偽式はもちろん充足不可能である \\
+	命題論理式において、式が恒真であるか恒偽であるかの判定は真理値表\\ \((2^nの場合がある)\)を書く有限回の作業により行うことができる.
+		
+
+	\newpage
+
+	\(\psi , \phi\)を任意の論理式とし主な論理結合子についての真偽値表を以下に表す \\
+
+	
+	
+
+
+\end{document}

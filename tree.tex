@@ -1,0 +1,22 @@
+\documentclass{jarticle}
+\usepackage{ecltree,epic,eepic}
+\begin{document}
+	\begin{center}
+	\GapWidth=1pt
+	\GapDepth=20pt
+	\begin{bundle}{\( \overline{\sigma}((P \land (P \to Q)) \to Q ) = 1\)}
+		\chunk{
+			\begin{bundle}{\( \overline{\sigma}(P \land (P \to Q)) = 0\)}
+				\chunk{\( \overline{\sigma}(P) = \sigma(P) = 1\)}
+				\chunk{
+					\begin{bundle}{\( \overline{\sigma}(P \to Q) = 0\)}
+						\chunk{\( \overline{\sigma}(P) = \sigma(P) = 1\)}
+						\chunk{\( \overline{\sigma}(Q) = \sigma(Q) = 0\)}
+					\end{bundle}				
+				}
+			\end{bundle}		
+		}
+		\chunk{\( \overline{\sigma}(Q) = \sigma(Q) = 0\)}
+	\end{bundle}
+	\end{center}
+\end{document}

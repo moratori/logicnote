@@ -1,0 +1,42 @@
+ Axiomatic System for Propositional Logic
+ A1 A -> (B -> A)
+ A2 (A -> (B -> C)) -> ((A -> B) -> (A -> C))
+ A3 (¬ B -> ¬ A) -> ((¬ B -> A) -> B)
+ R1 MP
+
+・deduction theorem Γ ,φ  |- ψ  →  Γ  |- φ ->ψ
+・inductive theorem Γ  |- φ ->ψ  →  Γ ,φ  |- ψ 
+
+inductive theorem
+	仮定より Γ  から φ ->ψ  への証明がある
+	その証明の列を B1 ... Bn とすると Bn は φ  -> ψ  である
+	推論規則 Modus Ponens より φ  -> ψ (これはBnである) , φ  から ψ  である
+	よって Γ ,φ  |- φ  である
+
+deduction theorem
+	仮定より Γ ,φ  |- ψ  への証明がある
+	その証明の列を B1 ... Bn とすると Bn は φ  となる
+	
+	Bi について i = 1 の時
+	(1)B1 は公理であるか , (2)B1 ∈  Γ  , (3)B1 = φ  である
+	
+	(1)
+		公理であるから |- B1
+		公理図式 A1 より |- (B1 -> (φ  -> B1))
+		これより MP から 
+		Γ , φ  |- φ  -> B1
+	
+	(2)
+		
+		
+
+	
+
+
+
+
+
+
+	
+	
+		

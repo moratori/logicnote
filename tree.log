@@ -1,0 +1,102 @@
+This is e-pTeX, Version 3.1415926-p3.3-110825-2.4 (utf8.euc) (TeX Live 2012/Debian) (format=platex 2013.8.1)  24 SEP 2013 22:17
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**tree.tex
+(./tree.tex
+pLaTeX2e <2006/11/10> (based on LaTeX2e <2011/06/27> patch level 0)
+Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, pi
+nyin, thai, loaded.
+(/usr/share/texlive/texmf-dist/tex/platex/base/jarticle.cls
+Document Class: jarticle 2006/06/27 v1.6 Standard pLaTeX class
+\c@@paper=\count81
+(/usr/share/texlive/texmf-dist/tex/platex/base/jsize10.clo
+File: jsize10.clo 2006/06/27 v1.6 Standard pLaTeX file (size option)
+)
+\c@part=\count82
+\c@section=\count83
+\c@subsection=\count84
+\c@subsubsection=\count85
+\c@paragraph=\count86
+\c@subparagraph=\count87
+\c@figure=\count88
+\c@table=\count89
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\symmincho=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `mincho' in version `bold'
+(Font)                  JY1/mc/m/n --> JY1/gt/m/n on input line 601.
+\toclineskip=\dimen118
+\@lnumwidth=\dimen119
+\bibindent=\dimen120
+\heisei=\count90
+) (./ecltree.sty
+ECL Tree graph macro by isozaki, Nov. 12, 1990
+\@BundleWidth=\dimen121
+\@BundleDepth=\dimen122
+\@BundleHeight=\dimen123
+\@NodeBox=\box41
+\GapDepth=\dimen124
+\GapWidth=\dimen125
+\EdgeLabelSep=\dimen126
+) (/usr/share/texlive/texmf-dist/tex/latex/eepic/epic.sty
+Enhancements to Picture Environment. Version 1.2 - Released June 1, 1986
+\@@multicnt=\count91
+\d@lta=\count92
+\@delta=\dimen127
+\@@delta=\dimen128
+\@gridcnt=\count93
+\@joinkind=\count94
+\@dotgap=\dimen129
+\@ddotgap=\dimen130
+\@x@diff=\count95
+\@y@diff=\count96
+\x@diff=\dimen131
+\y@diff=\dimen132
+\@dotbox=\box42
+\num@segments=\count97
+\num@segmentsi=\count98
+\@datafile=\read1
+) (/usr/share/texlive/texmf-dist/tex/latex/eepic/eepic.sty
+Extension to Epic and LaTeX. Version 1.1e - Released Dec 21, 1999
+\@gphlinewidth=\count99
+\@eepictcnt=\count100
+\@tempdimc=\dimen133
+\maxovaldiam=\dimen134
+\@filltype=\box43
+) (./tree.aux)
+\openout1 = `tree.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 18.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 18.
+ [1
+
+] (./tree.aux) ) 
+Here is how much of TeX's memory you used:
+ 423 strings out of 495281
+ 4469 string characters out of 3186457
+ 57268 words of memory out of 3000000
+ 3811 multiletter control sequences out of 15000+200000
+ 7519 words of font info for 31 fonts, out of 3000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 22i,12n,33p,146b,249s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on tree.dvi (1 page, 1104 bytes).
